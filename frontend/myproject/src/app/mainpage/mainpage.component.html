@@ -1,0 +1,98 @@
+<!-- <h1 align ="center">Time Management Application </h1>
+<nav>
+    <a routerLink="/manager">Manager</a><br>
+    <a routerLink="/task-create">Tasklist</a><br>
+    <a routerLink="/task-details">Task-details</a><br>
+    <a routerLink="/tasklist">Task-create</a><br>
+    <a routerLink="/userdashboard">UserDashboard</a><br>
+</nav>
+<router-outlet></router-outlet> -->
+
+
+
+<!-- <section class="vh-100">
+    <div class="container py-5 h-100">
+      <div class="row d-flex align-items-center justify-content-center h-100">
+        <div class="col-md-8 col-lg-7 col-xl-6">
+          <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.svg"
+            class="img-fluid" alt="Phone image">
+        </div>
+        <div class="col-md-7 col-lg-5 col-xl-5 offset-xl-1">   
+            <div class="px-5 ms-xl-4">
+                <i class="fas fa-crow fa-2x me-3 pt-5 mt-xl-4" style="color: #709085;"></i>
+                <span class="h1 fw-bold mb-0">Login</span>
+              </div>
+        <div class="d-flex align-items-center h-custom-2 px-5 ms-xl-4 mt-5 pt-5 pt-xl-0 mt-xl-n5"></div>
+        <form #loginform="ngForm" (ngSubmit)="loginform.valid && onsubmit(loginform.value)">
+            
+            <!-- Email input -->
+            <!-- <div class="form-outline mb-4">
+              <input type="text" id="form1Example13" class="form-control form-control-lg" #name="ngModel" name="name"  ngModel/>
+              <label class="form-label" for="form1Example13">User Name</label>
+            </div> -->
+  
+            <!-- Password input -->
+            <!-- <div class="form-outline mb-4">
+              <input type="password" id="form1Example23" class="form-control form-control-lg" name="password" #password="ngModel" ngModel/>
+              <label class="form-label" for="form1Example23">Password</label>
+            </div> -->
+  
+            <!-- <div class="d-flex justify-content-around align-items-center mb-4"> -->
+              <!-- Checkbox -->
+              <!-- <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="form1Example3" checked />
+                <label class="form-check-label" for="form1Example3"> Remember me </label>
+              </div>
+              <a href="#!">Forgot password?</a>
+            </div> -->
+  
+            <!-- Submit button -->
+            <!-- <button type="submit"  class="btn btn-primary btn-lg btn-block">Login</button>
+  
+            <div class="divider d-flex align-items-center my-4">
+              <p class="text-center fw-bold mx-3 mb-0 text-muted">OR</p>
+            </div>
+            <div class="text-center text-lg-start mt-4 pt-2">
+                <p class="small fw-bold mt-2 pt-1 mb-0">Don't have an account? <a href="/register"
+                    class="link-danger">Register</a></p>
+                </div>
+  
+          </form>
+        </div>
+      </div>
+    </div>
+    
+  </section> -->
+
+  <h2>Task Details</h2>
+ <table class="table table-dark table-striped">
+    <thead>
+     <tr>
+        <th>Task Name</th>
+        <th>Task id</th>
+        <th>task_Status</th>
+        <th>start time</th>
+        <th>end time</th>
+        <th>created_Date</th>
+        <th>approval_Status</th>
+        <th>assigned_Manager</th>
+        <th>task_Description</th>
+     </tr>
+    </thead>
+    
+    
+    <tbody>
+    <tr *ngFor="let item of tasklist | pipe: searchText; index as i">
+        <td>{{item.task_name}}</td>
+        <td>{{item.task_id}}</td>
+        <td>{{item.task_status}}</td>
+        <td>{{item.start_Time}}</td>
+        <td>{{item.end_Time }}</td>
+        <td>{{item.created_Date}}</td>
+        <td>{{item.approval_Status}}</td>
+        <td>{{item.assigned_Manager}}</td>
+        <td>{{item.task_Description}}</td>
+        <td><button (click)="tasklist(item)">delete</button></td>
+    </tr>
+</tbody>
+ </table>

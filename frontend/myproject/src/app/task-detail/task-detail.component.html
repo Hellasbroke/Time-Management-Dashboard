@@ -1,0 +1,90 @@
+<body>
+
+    <div class="container">
+  
+        <div class="card cd-card">
+  
+            <h2 class=" text-info text-center fw-bold">ADD-TASK</h2>
+            <p class="text-center">Add your task here!....</p>
+  
+            <section>
+              <div class="form">
+                <form [formGroup]="formValue">
+              
+                    <div class="mb-3">
+                        <label for="task_name" class="form-label">Task_name</label>
+                        <input type="text" class="form-control" id="name" formControlName="task_name">
+                        <!-- <small  class="text-danger" *ngIf="employeeName && employeeName.invalid && employeeName.touched ">please enter valid name</small> -->
+                      </div>
+                      <div class="mb-3">
+                        <label for="task_id" class="form-label">Task_id</label>
+                        <input type="number" class="form-control" id="task_id" formControlName="task_id">
+                        <!-- <small  class="text-danger" *ngIf="employeeEmail && employeeEmail.invalid && employeeEmail.touched ">please enter valid name</small> -->
+                      </div>
+                      <div class="mb-3">
+                        <label for="task_status" class="form-label">Task_status</label>
+                        <input type="text" class="form-control" id="task_status" formControlName="task_status">
+                        <!-- <small  class="text-danger" *ngIf="employeeDepartment && employeeDepartment.invalid && employeeDepartment.touched ">please enter valid name</small> -->
+                      </div>
+                      <div class="mb-3">
+                        <label for="start_time" class="form-label">Start_time</label>
+                        <input type="time" class="form-control" id="start_time" formControlName="start_Time">
+                        <!-- <small  class="text-danger" *ngIf="employeePhone && employeePhone.invalid && employeePhone.touched ">please enter valid name</small> -->
+                      </div>
+                      <div class="mb-3">
+                        <label for="end_time" class="form-label">End_time</label>
+                        <input type="time" class="form-control" id="end_time" formControlName="end_Time">
+                        <!-- <small  class="text-danger" *ngIf="employeePhone && employeePhone.invalid && employeePhone.touched ">please enter valid name</small> -->
+                      </div>
+                      <div class="mb-3">
+                        <label for="created_date" class="form-label">Created_date</label>
+                        <input type="date" class="form-control" id="created_date" formControlName="created_Date">
+                        <!-- <small  class="text-danger" *ngIf="employeePhone && employeePhone.invalid && employeePhone.touched ">please enter valid name</small> -->
+                      </div>
+                      <div class="mb-3">
+                        <label for="approval_status" class="form-label">Approval_status</label>
+                        <input type="text" class="form-control" id="approval_status" formControlName="approval_Status">
+                        <!-- <small  class="text-danger" *ngIf="employeePhone && employeePhone.invalid && employeePhone.touched ">please enter valid name</small> -->
+                      </div>
+                      <div class="mb-3">
+                        <label for="assigned_manager" class="form-label">Assigned_manager</label>
+                        <input type="text" class="form-control" id="assigned_manager" formControlName="assigned_Manager">
+                        <!-- <small  class="text-danger" *ngIf="employeePhone && employeePhone.invalid && employeePhone.touched ">please enter valid name</small> -->
+                      </div>
+                      <div class="mb-3">
+                        <label for="task_description" class="form-label">Task_description</label>
+                        <input type="text" class="form-control" id="task_description" formControlName="task_Description">
+                        <!-- <small  class="text-danger" *ngIf="employeePhone && employeePhone.invalid && employeePhone.touched ">please enter valid name</small> -->
+                      </div>
+                      <div class="mb-3">
+                        <button type="submit"  class="btn btn-primary" (click)="add()" >Submit</button>
+                      </div>
+                   
+                    
+                </form>
+  
+  
+  
+  
+              </div>
+  
+  
+            </section>
+  
+  
+  
+        </div>
+  
+  
+  
+  
+  
+    </div>
+  
+  
+  
+  
+  
+  
+  
+  </body>

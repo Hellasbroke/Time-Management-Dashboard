@@ -1,0 +1,42 @@
+<div class="container-fluid  head-bg">
+
+    <div class="fw-bold text-center  container-fluid p-0 m-0 form-group pb-2">
+
+        <input type="text" class="form-control"
+
+    [(ngModel)]="searchText" placeholder="Enter text to search" >
+
+</div>
+</div>
+ <h2>Task Status</h2>
+ <table class="table table-dark table-striped">
+    <thead>
+     <tr>
+        <th>Task Name</th>
+        <th>Task id</th>
+        <th>task_Status</th>
+        <!-- <th>start time</th> -->
+        <!-- <th>end time</th> -->
+        <!-- <th>created_Date</th> -->
+        <!-- <th>approval_Status</th> -->
+        <!-- <th>assigned_Manager</th> -->
+        <!-- <th>task_Description</th> -->
+     </tr>
+    </thead>
+    
+    
+    <tbody>
+    <tr *ngFor="let item of tasklist | pipe: searchText; index as i">
+        <td>{{item.task_name}}</td>
+        <td>{{item.task_id}}</td>
+        <td>{{item.task_status}}</td>
+        <!-- <td>{{item.start_Time}}</td> -->
+        <!-- <td>{{item.end_Time }}</td> -->
+        <!-- <td>{{item.created_Date}}</td> -->
+        <!-- <td>{{item.approval_Status}}</td> -->
+        <!-- <td>{{item.assigned_Manager}}</td> -->
+        <!-- <td>{{item.task_Description}}</td> -->
+        <!-- <td><button (click)="tasklist(item)">delete</button></td> -->
+    </tr>
+</tbody>
+ </table>
